@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class VectorSinRepetidos {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[10];
+
+        for(int i = 0; i < numeros.length; i++){
+            boolean repetido;
+            do{
+                repetido = false;
+                System.out.print("Ingrese número para la posición " + i + ": ");
+                int num = sc.nextInt();
+                for(int j = 0; j < i; j++){
+                    if(num == numeros[j]){
+                        repetido = true;
+                        System.out.println("Número repetido, ingrese otro.");
+                        break;
+                    }
+                }
+                if(!repetido){
+                    numeros[i] = num;
+                }
+            }while(repetido);
+        }
+        System.out.println("Vector final:");
+
+        for(int n : numeros){
+            System.out.print(n + " ");
+        }
+    }
+}
