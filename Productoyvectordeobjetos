@@ -1,0 +1,16 @@
+public class Producto {
+
+    String nombre;
+    double precioUnitario;
+    int cantidad;
+
+    public Producto(String nombre, double precioUnitario, int cantidad) {
+        this.nombre = nombre;
+        this.precioUnitario = precioUnitario;
+        this.cantidad = cantidad;
+    }
+
+    public double calcularTotal() {
+        return precioUnitario * cantidad;
+    }
+}
